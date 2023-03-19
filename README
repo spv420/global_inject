@@ -1,0 +1,31 @@
+Ye Olde Source
+==============
+
+Hi there. I haven't released anything in a while. Here's some never-
+before-seen source code from the p0laris project, specifically the
+global-inject code. I'll write more of a README later.
+
+`interpose` directory is entirely unmodified, straight from the
+archives. All I did was remove the xcworkspace (paranoia), and binaries
+(who wants those in git!).
+
+The code is bad, I know. Janky-hacks on top of janky-hacks that were
+never meant to see the light of day without a touch-up.
+
+Listing
+-------
+```
+README                        - this file
+interpose/Makefile            - it's a fucking Makefile what am I
+                                supposed to write
+interpose/ent.xml             - entitlements for ldid and shit
+interpose/src/envbypass.{c,h} - fucks up launchd to allow globally
+                                setting DYLD_INSERT_LIBRARIES
+interpose/src/game_over.c     - IIRC not needed, but have fun. C-only
+                                inject code
+interpose/src/game_over.m     - "updated" code, written in Objective-C
+                                for some reason
+interpose/src/main.mm         - i have no idea what this is
+```
+
+License: WTFPL.
